@@ -1,6 +1,26 @@
 # JWT Authentication in Spring Boot
 
-This project demonstrates how to implement JWT-based authentication and authorization in a Spring Boot application. The following steps outline the process:
+This project demonstrates how to implement JWT-based authentication and authorization in a Spring Boot application.
+
+## Overall Flow of the Project
+
+1. **User Registration**
+   - First, register a user and obtain an `access_token` and `refresh_token`.
+
+2. **User Login**
+   - After registering, log in to obtain a new `access_token` and `refresh_token`.
+   - Use the `access_token` to access the protected endpoints.
+   - If the `access_token` expires, it will no longer grant access to the endpoints.
+
+3. **Using the Refresh Token**
+   - When the `access_token` expires, use the `refresh_token` obtained during login.
+   - Pass the `refresh_token` in the header and call the `refresh_token` endpoint.
+   - This will generate a new `access_token` and `refresh_token`.
+   - Use the newly created `access_token` to access the endpoints.
+
+4. **Potential Issue**
+   - A potential issue in the current implementation is that an old `refresh_token` can be used to obtain a new `access_token` and `refresh_token`.
+   - This is not ideal, and the project should be modified to prevent this from happening.
 
 ## Project Setup
 
@@ -114,4 +134,4 @@ This project demonstrates how to implement JWT-based authentication and authoriz
 
 ---
 
-This README file provides a comprehensive overview of implementing JWT authentication in a Spring Boot application, covering user registration, login, token validation, and logout functionality.
+This README file provides a comprehensive overview of the JWT authentication implementation in the Spring Boot project, including detailed steps for user registration, login, token validation, logout, and refresh token management.
