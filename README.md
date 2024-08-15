@@ -134,4 +134,4 @@ This project demonstrates how to implement JWT-based authentication and authoriz
 
 ---
 
-This README file provides a comprehensive overview of the JWT authentication implementation in the Spring Boot project, including detailed steps for user registration, login, token validation, logout, and refresh token management.
+This README file provides a comprehensive overview of the JWT authentication implementation in the Spring Boot project, including detailed steps for user registration, login, token validation, logout, and refresh token management.If you had any queries please contact me in email: nisanthjothi2004@gmail.com
